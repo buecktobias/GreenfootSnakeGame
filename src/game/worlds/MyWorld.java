@@ -21,6 +21,7 @@ import java.sql.SQLException;
  */
 public class MyWorld extends World
 {
+    private Rabbit rabbit;
     @Override
     public void removeObject(Actor object) {
         super.removeObject(object);
@@ -41,6 +42,7 @@ public class MyWorld extends World
         Snake s = new Snake();
         this.addObject(s, 100, 100);
         Rabbit r = new Rabbit();
+        this.rabbit = r;
         Connection c = new Connection();
         Vector2D rabbitPosition;
         try {
@@ -56,5 +58,16 @@ public class MyWorld extends World
         Teleporter t1 = new Teleporter(new Vector2D(100, 200), new Vector2D(400, 100));
         this.addObject(t1,0,0);
         this.setPaintOrder(Rabbit.class, MovingActor.class);
+    }
+
+    @Override
+    public void stopped() {
+        super.stopped();
+        Connection c = new Connection();
+        try {
+            c.setRabbitPosition(new Vector2D(this.rabbit.getX(), this.rabbit.getY()));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

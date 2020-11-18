@@ -25,4 +25,10 @@ public class Connection {
         int y = rs.getInt(3);
         return new Vector2D(x,y);
     }
+
+    public void setRabbitPosition(Vector2D rabbitPosition) throws SQLException{
+        this.conn.setSchema("main");
+        Statement stmt= this.conn.createStatement();
+        stmt.executeUpdate(String.format("UPDATE rabbit SET x = %s, y = %s WHERE id=1;", rabbitPosition.getIntX(), rabbitPosition.getIntY()));
+    }
 }
