@@ -1,5 +1,6 @@
 package game.worlds;
 
+import game.database.Connection;
 import game.player.Player;
 import game.entity.teleporter.Teleporter;
 import game.helper.Vector2D;
@@ -8,6 +9,8 @@ import game.entity.movingactor.MovingActor;
 import game.entity.movingactor.Rabbit;
 import game.entity.movingactor.Snake;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+import java.sql.SQLException;
 
 
 /**
@@ -38,7 +41,16 @@ public class MyWorld extends World
         Snake s = new Snake();
         this.addObject(s, 100, 100);
         Rabbit r = new Rabbit();
-        this.addObject(r, 400, 400);
+        Connection c = new Connection();
+        Vector2D rabbitPosition;
+        try {
+            rabbitPosition = c.getRabbitPosition();
+        }catch (SQLException throwables) {
+            throwables.printStackTrace();
+            rabbitPosition = new Vector2D(400, 400);
+        }
+
+        this.addObject(r, rabbitPosition.getIntX(), rabbitPosition.getIntY());
         Player p = new Player(r);
         this.addObject(p,0,0);
         Teleporter t1 = new Teleporter(new Vector2D(100, 200), new Vector2D(400, 100));
