@@ -21,7 +21,7 @@ import java.sql.SQLException;
  */
 public class MyWorld extends World
 {
-    private Rabbit rabbit;
+    private final Rabbit rabbit;
     @Override
     public void removeObject(Actor object) {
         super.removeObject(object);
@@ -29,6 +29,10 @@ public class MyWorld extends World
             Entity entity = (Entity) object;
             entity.removedFromWorld(this);
         }
+    }
+
+    public boolean isPositionInWorld(Vector2D position){
+        return this.getWidth() > position.getX() && position.getX() > 0 && position.getY() < this.getHeight() && position.getY() > 0;
     }
 
     /**

@@ -3,6 +3,7 @@ package game.entity.movingactor;
 import game.entity.Entity;
 import game.helper.Direction;
 import game.helper.Vector2D;
+import game.worlds.MyWorld;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
 
@@ -88,8 +89,11 @@ public abstract class MovingActor extends Entity {
     }
 
     public void setPosition(Vector2D position) {
-        this.position = position;
-        super.setLocation(position.getIntX(), position.getIntY());
+        MyWorld mw = (MyWorld)this.getWorld();
+        if (mw.isPositionInWorld(position)) {
+            this.position = position;
+            super.setLocation(position.getIntX(), position.getIntY());
+        }
     }
 
     public void setCurrentSpeed(Vector2D currentSpeed) {
