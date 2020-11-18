@@ -1,6 +1,6 @@
 package game.entity;
-import game.Cooldown;
-import game.Countdown;
+import game.countdown.Cooldown;
+import game.countdown.Countdown;
 import greenfoot.Actor;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
@@ -16,7 +16,7 @@ public abstract class Entity  extends Actor
     private boolean isInWorld = false;
     private final GreenfootImage defaultImage;
 
-    public Entity(GreenfootImage greenfootImage){
+    protected Entity(GreenfootImage greenfootImage){
         this.setImage(new GreenfootImage(greenfootImage));
         this.defaultImage = new GreenfootImage(greenfootImage);
     }
@@ -27,7 +27,7 @@ public abstract class Entity  extends Actor
         this.isInWorld = true;
     }
 
-    protected void removedFromWorld(World world){
+    public void removedFromWorld(World world){
         this.isInWorld = false;
     }
 

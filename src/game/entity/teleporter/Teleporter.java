@@ -1,10 +1,13 @@
-package game;
+package game.entity.teleporter;
 
+import game.helper.Settings;
+import game.helper.Vector2D;
+import game.countdown.Cooldown;
 import game.entity.Entity;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class game.Teleporter here.
+ * Write a description of class game.entity.teleporter.Teleporter here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -39,7 +42,7 @@ public class Teleporter extends Entity
     }
 
     /**
-     * Act - do whatever the game.Teleporter wants to do. This method is called whenever
+     * Act - do whatever the game.entity.teleporter.Teleporter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

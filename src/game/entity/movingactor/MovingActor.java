@@ -1,8 +1,8 @@
-package game.entity;
+package game.entity.movingactor;
 
-import game.Direction;
-import game.Vector2D;
 import game.entity.Entity;
+import game.helper.Direction;
+import game.helper.Vector2D;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
 
@@ -14,7 +14,7 @@ public abstract class MovingActor extends Entity {
     private int speed;
     private Direction lastDirection;
 
-    public MovingActor(int speed, GreenfootImage greenfootImage) {
+    protected MovingActor(int speed, GreenfootImage greenfootImage) {
         super(greenfootImage);
         this.currentSpeed = new Vector2D(0,0);
         this.position = new Vector2D(100, 100);
@@ -66,7 +66,7 @@ public abstract class MovingActor extends Entity {
         this.currentSpeed = newSpeed;
     }
 
-    protected void moveDirection(Direction d){
+    public void moveDirection(Direction d){
         this.lastDirection = d;
         this.moveBy(d.getVector2D().scalarMultiplication(this.speed));
     }

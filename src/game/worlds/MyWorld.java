@@ -1,12 +1,17 @@
-package game;
+package game.worlds;
 
+import game.player.Player;
+import game.entity.teleporter.Teleporter;
+import game.helper.Vector2D;
 import game.entity.Entity;
-import game.entity.MovingActor;
+import game.entity.movingactor.MovingActor;
+import game.entity.movingactor.Rabbit;
+import game.entity.movingactor.Snake;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 /**
- * Write a description of class src.worlds.game.MyWorld here.
+ * Write a description of class src.worlds.game.worlds.MyWorld here.
  *
  * @author Tobias Bück
  * @version 1
@@ -23,7 +28,7 @@ public class MyWorld extends World
     }
 
     /**
-     * Constructor for objects of class src.worlds.game.MyWorld
+     * Constructor for objects of class src.worlds.game.worlds.MyWorld
      *
      */
     public MyWorld()

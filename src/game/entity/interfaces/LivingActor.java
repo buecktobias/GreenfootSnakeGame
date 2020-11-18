@@ -1,12 +1,14 @@
-package game;
+package game.entity.interfaces;
+
+import game.entity.LifeBar;
 
 /**
- * Write a description of class game.LivingActor here.
+ * Write a description of class game.entity.interfaces.LivingActor here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-interface LivingActor extends IActor
+public interface LivingActor extends IActor
 {
     int getLife();
     void setLife(int newLife);

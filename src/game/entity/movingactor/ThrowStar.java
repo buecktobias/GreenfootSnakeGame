@@ -1,11 +1,16 @@
-package game;
+package game.entity.movingactor;
 
+import game.countdown.Countdown;
+import game.entity.interfaces.CanBeHit;
+import game.entity.interfaces.CanShoot;
+import game.helper.Direction;
+import game.helper.Settings;
 import greenfoot.GreenfootImage;
 
 import java.util.List;
 
 /**
- * Write a description of class game.ThrowStar here.
+ * Write a description of class game.entity.movingactor.ThrowStar here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,7 +24,7 @@ public class ThrowStar extends Projectile
     }
 
     /**
-     * Act - do whatever the game.ThrowStar wants to do. This method is called whenever
+     * Act - do whatever the game.entity.movingactor.ThrowStar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

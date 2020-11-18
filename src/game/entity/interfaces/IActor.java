@@ -1,4 +1,4 @@
-package game;
+package game.entity.interfaces;
 
 import greenfoot.Greenfoot;
 import greenfoot.GreenfootImage;
@@ -6,12 +6,12 @@ import greenfoot.World;
 import greenfoot.platforms.ActorDelegate;
 
 /**
- * Write a description of class game.IActor here.
+ * Write a description of class game.entity.interfaces.IActor here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-interface IActor
+public interface IActor
 {
     int getX();
     int getY();

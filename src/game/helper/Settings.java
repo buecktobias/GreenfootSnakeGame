@@ -1,4 +1,4 @@
-package game;
+package game.helper;
 
 public class Settings {
     private final static String filePath = "/home/tobias/Documents/Informatik/Grundbegriffe_2_OOP_IntelliJ_v1/src/images/";

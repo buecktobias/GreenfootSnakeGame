@@ -1,19 +1,20 @@
-package game;
+package game.entity.teleporter;
 
+import game.helper.Settings;
 import game.entity.Entity;
 import greenfoot.GreenfootImage;
 
 import java.util.List;
 
 /**
- * Write a description of class game.TeleporterObject here.
+ * Write a description of class game.entity.teleporter.TeleporterObject here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class TeleporterObject extends Entity
 {
-    public TeleporterObject getOther() {
+    protected TeleporterObject getOther() {
         return other;
     }
 
@@ -43,7 +44,7 @@ public class TeleporterObject extends Entity
     }
 
     /**
-     * Act - do whatever the game.TeleporterObject wants to do. This method is called whenever
+     * Act - do whatever the game.entity.teleporter.TeleporterObject wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

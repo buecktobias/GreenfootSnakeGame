@@ -1,9 +1,10 @@
-package game;
+package game.countdown;
 
+import game.helper.Settings;
 import greenfoot.World;
 
 /**
- * Write a description of class game.Cooldown here.
+ * Write a description of class game.countdown.Cooldown here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,7 +12,7 @@ import greenfoot.World;
 public class Cooldown extends Countdown
 {
     /**
-     * Constructor for objects of class game.Cooldown
+     * Constructor for objects of class game.countdown.Cooldown
      */
     public Cooldown(int cooldownTime, World w)
     {
@@ -23,7 +24,7 @@ public class Cooldown extends Countdown
         this.setCurrentCount(this.getSTART_COUNT());
     }
 
-    protected boolean isCooledDown(){
+    public boolean isCooledDown(){
         return this.isDown();
     }
 

@@ -1,15 +1,19 @@
-package game;
+package game.entity.movingactor;
 
-import game.entity.MovingActor;
+import game.countdown.Cooldown;
+import game.entity.interfaces.CanShoot;
+import game.entity.interfaces.LivingActor;
+import game.entity.teleporter.Teleportable;
+import game.helper.Settings;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class game.Rabbit here.
+ * Write a description of class game.entity.movingactor.Rabbit here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Rabbit extends MovingActor implements  CanShoot, LivingActor, Teleportable
+public class Rabbit extends MovingActor implements CanShoot, LivingActor, Teleportable
 {
     private int life = 10;
     private Cooldown throwingCooldown;
@@ -25,7 +29,7 @@ public class Rabbit extends MovingActor implements  CanShoot, LivingActor, Telep
     }
 
     /**
-     * Act - do whatever the game.Rabbit wants to do. This method is called whenever
+     * Act - do whatever the game.entity.movingactor.Rabbit wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

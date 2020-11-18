@@ -1,11 +1,13 @@
-package game;
+package game.entity.movingactor;
 
-import game.entity.MovingActor;
+import game.entity.interfaces.CanBeHit;
+import game.entity.interfaces.LivingActor;
+import game.helper.Settings;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
 
 /**
- * Write a description of class game.Snake here.
+ * Write a description of class game.entity.movingactor.Snake here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -30,7 +32,7 @@ public class Snake extends MovingActor implements CanBeHit, LivingActor
     }
 
     /**
-     * Act - do whatever the game.Snake wants to do. This method is called whenever
+     * Act - do whatever the game.entity.movingactor.Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

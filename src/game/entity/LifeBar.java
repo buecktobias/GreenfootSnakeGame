@@ -1,10 +1,11 @@
-package game;
+package game.entity;
 
-import game.entity.Entity;
+import game.entity.interfaces.LivingActor;
+import game.helper.Settings;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class game.LifeBar here.
+ * Write a description of class game.entity.LifeBar here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -25,7 +26,7 @@ public class LifeBar extends Entity
         forA.getWorld().addObject(this, x + this.xOffset, y + this.yOffset);
     }
     /**
-     * Act - do whatever the game.LifeBar wants to do. This method is called whenever
+     * Act - do whatever the game.entity.LifeBar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
