@@ -1,10 +1,12 @@
+package game;
+
 import greenfoot.Greenfoot;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
 import greenfoot.platforms.ActorDelegate;
 
 /**
- * Write a description of class IActor here.
+ * Write a description of class game.IActor here.
  * 
  * @author (your name) 
  * @version (a version number or a date)

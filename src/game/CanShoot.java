@@ -1,5 +1,7 @@
+package game;
+
 /**
- * Write a description of class CanShoot here.
+ * Write a description of class game.CanShoot here.
  * 
  * @author (your name) 
  * @version (a version number or a date)

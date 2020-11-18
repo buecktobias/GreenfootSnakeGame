@@ -1,7 +1,10 @@
+package game;
+
+import game.entity.Entity;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Teleporter here.
+ * Write a description of class game.Teleporter here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,6 +19,7 @@ public class Teleporter extends Entity
     private final int TELEPORT_TIME = 200;
 
     public Teleporter(Vector2D positionTeleporter1, Vector2D positionTeleporter2){
+        super(new GreenfootImage(Settings.getFilePath("Transparent.png")));
         this.teleporter1 = new TeleporterObject();
         this.teleporter2 = new TeleporterObject();
         this.teleporter1.setOther(this.teleporter2);
@@ -35,7 +39,7 @@ public class Teleporter extends Entity
     }
 
     /**
-     * Act - do whatever the Teleporter wants to do. This method is called whenever
+     * Act - do whatever the game.Teleporter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

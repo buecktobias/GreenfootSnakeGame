@@ -1,3 +1,9 @@
+package game.entity;
+
+import game.Direction;
+import game.Vector2D;
+import game.entity.Entity;
+import greenfoot.GreenfootImage;
 import greenfoot.World;
 
 import java.util.Random;
@@ -8,8 +14,8 @@ public abstract class MovingActor extends Entity {
     private int speed;
     private Direction lastDirection;
 
-    public MovingActor(int speed) {
-        super();
+    public MovingActor(int speed, GreenfootImage greenfootImage) {
+        super(greenfootImage);
         this.currentSpeed = new Vector2D(0,0);
         this.position = new Vector2D(100, 100);
         this.speed = speed;

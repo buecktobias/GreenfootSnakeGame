@@ -1,5 +1,7 @@
+package game;
+
 /**
- * Write a description of class Teleportable here.
+ * Write a description of class game.Teleportable here.
  * 
  * @author (your name) 
  * @version (a version number or a date)

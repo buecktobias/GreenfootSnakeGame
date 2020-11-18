@@ -1,7 +1,9 @@
+package game;
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Countdown here.
+ * Write a description of class game.Countdown here.
  *
  * @author (your name)
  * @version (a version number or a date)
@@ -19,7 +21,7 @@ public class Countdown extends Actor {
 
     private int currentCount;
 
-    protected Countdown(int START_COUNT, World w) {
+    public Countdown(int START_COUNT, World w) {
         this.START_COUNT = START_COUNT;
         this.currentCount = START_COUNT;
         w.addObject(this, 0, 0);
@@ -27,7 +29,7 @@ public class Countdown extends Actor {
     }
 
     /**
-     * Act - do whatever the Countdown wants to do. This method is called whenever
+     * Act - do whatever the game.Countdown wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {

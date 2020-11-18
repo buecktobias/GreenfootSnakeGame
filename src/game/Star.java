@@ -1,3 +1,5 @@
+package game;
+
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 

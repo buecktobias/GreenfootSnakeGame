@@ -1,8 +1,10 @@
+package game;
+
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 
 /**
- * Write a description of class Player here.
+ * Write a description of class game.Player here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,7 +18,7 @@ public class Player extends Actor
     final String KEY_MOVE_DOWN = "S";
     final String KEY_THROW = "T";
     /**
-     * Constructor for objects of class Player
+     * Constructor for objects of class game.Player
      */
     public Player(Rabbit controlledRobot)
     {

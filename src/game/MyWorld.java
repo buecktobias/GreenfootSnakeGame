@@ -1,8 +1,12 @@
+package game;
+
+import game.entity.Entity;
+import game.entity.MovingActor;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 /**
- * Write a description of class src.worlds.MyWorld here.
+ * Write a description of class src.worlds.game.MyWorld here.
  *
  * @author Tobias Bück
  * @version 1
@@ -19,7 +23,7 @@ public class MyWorld extends World
     }
 
     /**
-     * Constructor for objects of class src.worlds.MyWorld
+     * Constructor for objects of class src.worlds.game.MyWorld
      *
      */
     public MyWorld()

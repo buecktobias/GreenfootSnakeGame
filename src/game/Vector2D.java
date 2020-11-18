@@ -1,7 +1,9 @@
+package game;
+
 import java.util.Objects;
 
 /**
- * The Vector2D class is a Vector in a two dimension environment.
+ * The game.Vector2D class is a Vector in a two dimension environment.
  * It has the attributes
  *  x and y
  * @author tobias bück

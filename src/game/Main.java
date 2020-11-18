@@ -1,3 +1,5 @@
+package game;
+
 import greenfoot.export.GreenfootScenarioViewer;
 
 public class Main {

@@ -1,7 +1,10 @@
+package game;
+
+import game.entity.MovingActor;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Rabbit here.
+ * Write a description of class game.Rabbit here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,7 +14,7 @@ public class Rabbit extends MovingActor implements  CanShoot, LivingActor, Telep
     private int life = 10;
     private Cooldown throwingCooldown;
     public Rabbit(){
-        super(2);
+        super(2, new GreenfootImage(Settings.getFilePath("hase.png")));
     }
 
     @Override
@@ -22,7 +25,7 @@ public class Rabbit extends MovingActor implements  CanShoot, LivingActor, Telep
     }
 
     /**
-     * Act - do whatever the Rabbit wants to do. This method is called whenever
+     * Act - do whatever the game.Rabbit wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

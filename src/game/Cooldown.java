@@ -1,7 +1,9 @@
+package game;
+
 import greenfoot.World;
 
 /**
- * Write a description of class Cooldown here.
+ * Write a description of class game.Cooldown here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,11 +11,12 @@ import greenfoot.World;
 public class Cooldown extends Countdown
 {
     /**
-     * Constructor for objects of class Cooldown
+     * Constructor for objects of class game.Cooldown
      */
-    protected Cooldown(int cooldownTime, World w)
+    public Cooldown(int cooldownTime, World w)
     {
         super(cooldownTime, w);
+        this.setImage(Settings.getFilePath("Transparent.png"));
     }
 
     private void resetCooldown(){

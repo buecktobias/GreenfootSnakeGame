@@ -1,5 +1,7 @@
+package game;
+
 /**
- * Write a description of class CanBeHit here.
+ * Write a description of class game.CanBeHit here.
  * 
  * @author (your name) 
  * @version (a version number or a date)

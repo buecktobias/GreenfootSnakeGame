@@ -1,7 +1,11 @@
+package game;
+
+import greenfoot.GreenfootImage;
+
 import java.util.List;
 
 /**
- * Write a description of class ThrowStar here.
+ * Write a description of class game.ThrowStar here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,11 +15,11 @@ public class ThrowStar extends Projectile
     private Countdown countdown;
 
     public ThrowStar(){
-        super(5);
+        super(5, new GreenfootImage(Settings.getFilePath("Stern2.png")));
     }
 
     /**
-     * Act - do whatever the ThrowStar wants to do. This method is called whenever
+     * Act - do whatever the game.ThrowStar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

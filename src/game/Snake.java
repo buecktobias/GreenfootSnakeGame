@@ -1,7 +1,11 @@
+package game;
+
+import game.entity.MovingActor;
+import greenfoot.GreenfootImage;
 import greenfoot.World;
 
 /**
- * Write a description of class Snake here.
+ * Write a description of class game.Snake here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -10,7 +14,7 @@ public class Snake extends MovingActor implements CanBeHit, LivingActor
 {
     private int life;
     public Snake(){
-        super(1);
+        super(1, new GreenfootImage(Settings.getFilePath("snake2.png")));
         this.setLife(20);
     }
 
@@ -26,7 +30,7 @@ public class Snake extends MovingActor implements CanBeHit, LivingActor
     }
 
     /**
-     * Act - do whatever the Snake wants to do. This method is called whenever
+     * Act - do whatever the game.Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
