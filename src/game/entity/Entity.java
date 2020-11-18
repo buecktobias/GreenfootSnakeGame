@@ -1,4 +1,5 @@
 package game.entity;
+
 import game.countdown.Cooldown;
 import game.countdown.Countdown;
 import greenfoot.Actor;
@@ -11,12 +12,11 @@ import greenfoot.World;
  * @author (your name)
  * @version (a version number or a date)
  */
-public abstract class Entity  extends Actor
-{
+public abstract class Entity extends Actor {
     private boolean isInWorld = false;
     private final GreenfootImage defaultImage;
 
-    protected Entity(GreenfootImage greenfootImage){
+    protected Entity(GreenfootImage greenfootImage) {
         this.setImage(new GreenfootImage(greenfootImage));
         this.defaultImage = new GreenfootImage(greenfootImage);
     }
@@ -27,27 +27,27 @@ public abstract class Entity  extends Actor
         this.isInWorld = true;
     }
 
-    public void removedFromWorld(World world){
+    public void removedFromWorld(World world) {
         this.isInWorld = false;
     }
 
-    protected void destroySelf(){
+    protected void destroySelf() {
         this.getWorld().removeObject(this);
     }
 
-    public Countdown createCountdown(int START_COUNT){
+    protected Countdown createCountdown(int START_COUNT) {
         return new Countdown(START_COUNT, this.getWorld());
     }
 
-    public Cooldown createCooldown(int START_COUNT){
+    protected Cooldown createCooldown(int START_COUNT) {
         return new Cooldown(START_COUNT, this.getWorld());
     }
 
-    public boolean isInWorld() {
+    protected boolean isInWorld() {
         return isInWorld;
     }
 
-    public GreenfootImage getDefaultImage() {
+    protected GreenfootImage getDefaultImage() {
         return new GreenfootImage(defaultImage);
     }
 }

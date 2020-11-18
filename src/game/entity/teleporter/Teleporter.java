@@ -14,10 +14,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Teleporter extends Entity
 {
-    private TeleporterObject teleporter1;
-    private TeleporterObject teleporter2;
-    private Vector2D positionTeleporter1;
-    private Vector2D positionTeleporter2;
+    private final TeleporterObject teleporter1;
+    private final TeleporterObject teleporter2;
+    private final Vector2D positionTeleporter1;
+    private final Vector2D positionTeleporter2;
     private Cooldown teleportCooldown;
     private final int TELEPORT_TIME = 200;
 

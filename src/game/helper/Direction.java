@@ -2,7 +2,7 @@ package game.helper;
 
 import java.util.Random;
 
-public class Direction {
+final public class Direction {
     private final Values value;
     public enum Values {
         UP,

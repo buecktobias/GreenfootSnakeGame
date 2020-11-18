@@ -19,28 +19,26 @@ import java.sql.SQLException;
  * @author Tobias Bück
  * @version 1
  */
-public class MyWorld extends World
-{
+public class MyWorld extends World {
     private final Rabbit rabbit;
+
     @Override
     public void removeObject(Actor object) {
         super.removeObject(object);
-        if(object instanceof Entity){
+        if (object instanceof Entity) {
             Entity entity = (Entity) object;
             entity.removedFromWorld(this);
         }
     }
 
-    public boolean isPositionInWorld(Vector2D position){
+    public boolean isPositionInWorld(Vector2D position) {
         return this.getWidth() > position.getX() && position.getX() > 0 && position.getY() < this.getHeight() && position.getY() > 0;
     }
 
     /**
      * Constructor for objects of class src.worlds.game.worlds.MyWorld
-     *
      */
-    public MyWorld()
-    {
+    public MyWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         Snake s = new Snake();
@@ -51,16 +49,16 @@ public class MyWorld extends World
         Vector2D rabbitPosition;
         try {
             rabbitPosition = c.getRabbitPosition();
-        }catch (SQLException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
             rabbitPosition = new Vector2D(400, 400);
         }
 
         this.addObject(r, rabbitPosition.getIntX(), rabbitPosition.getIntY());
         Player p = new Player(r);
-        this.addObject(p,0,0);
+        this.addObject(p, 0, 0);
         Teleporter t1 = new Teleporter(new Vector2D(100, 200), new Vector2D(400, 100));
-        this.addObject(t1,0,0);
+        this.addObject(t1, 0, 0);
         this.setPaintOrder(Rabbit.class, MovingActor.class);
     }
 
