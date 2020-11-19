@@ -13,9 +13,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Rabbit extends MovingActor implements CanShoot, LivingActor, Teleportable
+final public class Rabbit extends MovingActor implements CanShoot, LivingActor, Teleportable
 {
-    private int life = 10;
+    private int life = 100;
     private Cooldown throwingCooldown;
     public Rabbit(){
         super(2, new GreenfootImage(Settings.getFilePath("hase.png")));
@@ -53,6 +53,15 @@ public class Rabbit extends MovingActor implements CanShoot, LivingActor, Telepo
 
     @Override
     public void setLife(int life) {
+        if (life < 0 ){
+            this.destroySelf();
+        }
         this.life = life;
     }
+
+    @Override
+    public boolean isInWorld() {
+        return super.isInWorld();
+    }
+
 }

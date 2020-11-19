@@ -11,7 +11,7 @@ import greenfoot.Greenfoot;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Player extends Actor {
+final public class Player extends Actor {
     private final Rabbit controlledRabbit;
     private final String KEY_MOVE_UP = "W";
     private final String KEY_MOVE_LEFT = "A";

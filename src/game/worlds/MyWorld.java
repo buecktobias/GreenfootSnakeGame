@@ -19,7 +19,7 @@ import java.sql.SQLException;
  * @author Tobias Bück
  * @version 1
  */
-public class MyWorld extends World {
+final public class MyWorld extends World {
     private final Rabbit rabbit;
 
     @Override

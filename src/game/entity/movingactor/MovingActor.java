@@ -88,7 +88,7 @@ public abstract class MovingActor extends Entity {
         this.setPosition(v);
     }
 
-    public void setPosition(Vector2D position) {
+    private void setPosition(Vector2D position) {
         MyWorld mw = (MyWorld)this.getWorld();
         if (mw.isPositionInWorld(position)) {
             this.position = position;

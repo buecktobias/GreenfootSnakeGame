@@ -12,7 +12,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Teleporter extends Entity
+final public class Teleporter extends Entity
 {
     private final TeleporterObject teleporter1;
     private final TeleporterObject teleporter2;
