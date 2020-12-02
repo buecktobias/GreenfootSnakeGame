@@ -54,7 +54,7 @@ final public class Rabbit extends MovingActor implements CanShoot, LivingActor, 
     @Override
     public void setLife(int life) {
         if (life < 0 ){
-            this.destroySelf();
+            Greenfoot.stop();
         }
         this.life = life;
     }

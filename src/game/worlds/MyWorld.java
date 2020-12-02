@@ -1,6 +1,7 @@
 package game.worlds;
 
 import game.database.Connection;
+import game.entity.SnakeSpawner;
 import game.player.Player;
 import game.entity.teleporter.Teleporter;
 import game.helper.Vector2D;
@@ -53,6 +54,7 @@ final public class MyWorld extends World {
             throwables.printStackTrace();
             rabbitPosition = new Vector2D(400, 400);
         }
+        this.addObject(new SnakeSpawner(),0,0);
 
         this.addObject(r, rabbitPosition.getIntX(), rabbitPosition.getIntY());
         Player p = new Player(r);

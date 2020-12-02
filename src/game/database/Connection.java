@@ -21,7 +21,7 @@ public class Connection {
         this.conn.setSchema("main");
         Statement stmt= this.conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from rabbit");
-        int x=rs.getInt(2);
+        int x= rs.getInt(2);
         int y = rs.getInt(3);
         return new Vector2D(x,y);
     }

@@ -32,7 +32,9 @@ public abstract class Entity extends Actor {
     }
 
     protected void destroySelf() {
-        this.getWorld().removeObject(this);
+        if(this.isInWorld) {
+            this.getWorld().removeObject(this);
+        }
     }
 
     protected Countdown createCountdown(int START_COUNT) {

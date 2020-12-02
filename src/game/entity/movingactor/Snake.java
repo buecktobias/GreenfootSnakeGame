@@ -4,6 +4,7 @@ import game.countdown.Cooldown;
 import game.countdown.Countdown;
 import game.entity.interfaces.CanBeHit;
 import game.entity.interfaces.LivingActor;
+import game.entity.teleporter.Teleportable;
 import game.helper.Settings;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
@@ -16,7 +17,7 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-final public class Snake extends MovingActor implements CanBeHit, LivingActor
+final public class Snake extends MovingActor implements CanBeHit, LivingActor, Teleportable
 {
     private boolean animationStarted = false;
     private Countdown animationCountdown;

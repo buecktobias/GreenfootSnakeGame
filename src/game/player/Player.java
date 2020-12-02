@@ -29,6 +29,9 @@ final public class Player extends Actor {
 
     @Override
     public void act() {
+        if(!this.controlledRabbit.isInWorld()){
+            Greenfoot.stop();
+        }
         super.act();
         this.controls();
     }
