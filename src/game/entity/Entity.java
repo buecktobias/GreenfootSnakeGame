@@ -1,7 +1,6 @@
 package game.entity;
 
-import game.countdown.Cooldown;
-import game.countdown.Countdown;
+
 import greenfoot.Actor;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
@@ -35,14 +34,6 @@ public abstract class Entity extends Actor {
         if(this.isInWorld) {
             this.getWorld().removeObject(this);
         }
-    }
-
-    protected Countdown createCountdown(int START_COUNT) {
-        return new Countdown(START_COUNT, this.getWorld());
-    }
-
-    protected Cooldown createCooldown(int START_COUNT) {
-        return new Cooldown(START_COUNT, this.getWorld());
     }
 
     protected boolean isInWorld() {

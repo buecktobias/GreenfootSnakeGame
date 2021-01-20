@@ -19,6 +19,15 @@ final public class Vector2D {
         this.y = y;
     }
 
+    public static Vector2D getVectorByRotation(int rotation){
+        double b1 = Math.cos(Math.toRadians(rotation)); // Degree
+        double b2 = Math.sqrt(1 - Math.pow(Math.cos(Math.toRadians(rotation)), 2));
+        if (rotation > 180){
+            b2 = -b2;
+        }
+        return new Vector2D(b2, -b1);
+    }
+
     public Vector2D scalarMultiplication(final double scalar){
         double newX = this.x * scalar;
         double newY = this.y * scalar;
@@ -65,5 +74,13 @@ final public class Vector2D {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return "Vector2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
